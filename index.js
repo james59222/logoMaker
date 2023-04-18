@@ -34,7 +34,6 @@ const questions = [
  
   }
 ];
-
 //Writes logo.svg file after choices submitted
 inquirer.prompt(questions).then(answers => {
   const { text, textColor, shape, shapeColor } = answers;
