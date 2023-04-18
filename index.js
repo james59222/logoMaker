@@ -1,8 +1,7 @@
-// Declare classes and variables
+// need class to capture text and the shape render
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./shape');
-// Questions for user choice shape and color
 const questions = [
   {
     type: 'input',
@@ -18,7 +17,7 @@ const questions = [
   {
     type: 'input',
     name: 'textColor',
-    message: 'Enter text color:',
+    message: 'Enter text color or hexadecimal:',
 
   },
   {
@@ -30,11 +29,11 @@ const questions = [
   {
     type: 'input',
     name: 'shapeColor',
-    message: 'Enter shape color:',
+    message: 'Enter shape color or hexadecimal:',
  
   }
 ];
-//Writes logo.svg file after choices submitted
+
 inquirer.prompt(questions).then(answers => {
   const { text, textColor, shape, shapeColor } = answers;
   const logo = generateLogo(text, textColor, shape, shapeColor);
@@ -47,7 +46,6 @@ inquirer.prompt(questions).then(answers => {
   });
 });
 
-//function generates logo after user inputs choices.
 function generateLogo(text, textColor, shape, shapeColor) {
   let shapeSvg;
   switch (shape) {
@@ -62,7 +60,7 @@ function generateLogo(text, textColor, shape, shapeColor) {
       break;
   }
   shapeSvg.colorChoice(shapeColor)
-  return `<svg width="310" height="325" xmlns="http://www.w3.org/2000/svg">
+  return `<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
     ${shapeSvg.render()}
     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="70">${text}</text>
   </svg>`;
