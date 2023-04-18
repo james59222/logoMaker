@@ -6,3 +6,4 @@ User choices for text and shape color.
 Save files as logo.svg file.
 Fixed triangle parameters to fit initials inside. Video showed slightly off. Now fixed please do not doc points.
 Used tutor and ASKBCS for help on this challenge. 
+Uses both common color names and hexadecimal. Tested works you can try it also.
