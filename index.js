@@ -41,7 +41,7 @@ inquirer.prompt(questions).then(answers => {
     if (err) {
       console.log('Error writing file:', err);
     } else {
-      console.log('Logo created successfully!');
+      console.log('Generated logo.svg!');
     }
   });
 });
