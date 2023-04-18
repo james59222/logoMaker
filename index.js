@@ -62,7 +62,7 @@ function generateLogo(text, textColor, shape, shapeColor) {
       break;
   }
   shapeSvg.colorChoice(shapeColor)
-  return `<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  return `<svg width="325" height="310" xmlns="http://www.w3.org/2000/svg">
     ${shapeSvg.render()}
     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="70">${text}</text>
   </svg>`;
