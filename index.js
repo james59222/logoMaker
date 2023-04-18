@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./shape');
+const isColor = require('is-color')
 
 const questions = [
   {
@@ -18,11 +19,11 @@ const questions = [
   {
     type: 'input',
     name: 'textColor',
-    message: 'Enter text color (in valid CSS format):',
+    message: 'Enter text color:',
     validate: color => {
-      if (!color.match(/^#[0-9A-F]{6}$/i)) {
-        return 'Invalid color format, use HEX format #RRGGBB';
-      }
+        if(!isColor(color)){
+            return 'Invalid color'
+          }
       return true;
     }
   },
@@ -35,10 +36,10 @@ const questions = [
   {
     type: 'input',
     name: 'shapeColor',
-    message: 'Enter shape color (in valid CSS format):',
+    message: 'Enter shape color:',
     validate: color => {
-      if (!color.match(/^#[0-9A-F]{6}$/i)) {
-        return 'Invalid color format, use HEX format #RRGGBB';
+      if(!isColor(color)){
+        return 'Invalid color'
       }
       return true;
     }
@@ -61,13 +62,13 @@ function generateLogo(text, textColor, shape, shapeColor) {
   let shapeSvg;
   switch (shape) {
     case 'Circle':
-      shapeSvg = new Circle(shapeColor).getSvg();
+      shapeSvg = new Circle(shapeColor);
       break;
     case 'Square':
-      shapeSvg = new Square(shapeColor).getSvg();
+      shapeSvg = new Square(shapeColor);
       break;
     case 'Triangle':
-      shapeSvg = new Triangle(shapeColor).getSvg();
+      shapeSvg = new Triangle(shapeColor);
       break;
   }
   return `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">

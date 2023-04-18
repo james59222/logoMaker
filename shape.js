@@ -16,13 +16,13 @@ class Shape {
     }
     class Square extends Shape {
         render() {
-            return`<rect x="0" y="0" width="30" height="30" fill=${this.shapeColor}/>
+            return`<rect x="90" y="40" width="120" height="120" fill=${this.shapeColor}/>
             <text x="150" y="125" font-size="70" text-anchor="middle" fill="${this.textColor}">${this.text}</text>`
         }
     }
     class Triangle extends Shape {
         render() {
-            return`<polygon points="50 15, 100 100, 0 100" fill=${this.shapeColor}/>
+            return`<polygon points="150, 18 244, 182 56,182" fill=${this.shapeColor}/>
             <text x="150" y="125" font-size="70" text-anchor="middle" fill="${this.textColor}">${this.text}</text>`
         }
     }

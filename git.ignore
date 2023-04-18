@@ -1,0 +1,5 @@
+#Git should ignore
+Assets
+Images
+node_modules
+.DS_STORE
