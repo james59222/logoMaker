@@ -1,7 +1,8 @@
-// need class to capture text and the shape render
+// Declare classes and variables
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./shape');
+// Questions for user choice shape and color
 const questions = [
   {
     type: 'input',
@@ -34,6 +35,7 @@ const questions = [
   }
 ];
 
+//Writes logo.svg file after choices submitted
 inquirer.prompt(questions).then(answers => {
   const { text, textColor, shape, shapeColor } = answers;
   const logo = generateLogo(text, textColor, shape, shapeColor);
@@ -46,6 +48,7 @@ inquirer.prompt(questions).then(answers => {
   });
 });
 
+//function generates logo after user inputs choices.
 function generateLogo(text, textColor, shape, shapeColor) {
   let shapeSvg;
   switch (shape) {
