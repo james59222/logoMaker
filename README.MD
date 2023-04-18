@@ -5,3 +5,4 @@ Node.js program that generates logo using circle, square, or triangle user choic
 User choices for text and shape color.
 Save files as logo.svg file.
 Fixed triangle parameters to fit initials inside. Video showed slightly off. Now fixed please do not doc points.
+Used tutor and ASKBCS for help on this challenge. 
