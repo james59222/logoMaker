@@ -1,4 +1,4 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    [object Object]
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="purple" font-size="70">JCP</text>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="190" r="160" fill="yellow" />;
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="green" font-size="70">JAM</text>
   </svg>
